@@ -3,23 +3,14 @@
   "version": "1.0",
   "manifest_version": 2,
   "description": "A simple manager for quickly finding and opening tabs.",
-  "background":  {
-    "scripts": [
-      "key-handler.js",
-      "popup.js",
-      "tab-manager.js"
-    ]
-  },
   "options_page": "options.html",
   "permissions": ["tabs"],
+  "browser_action": {
+    "default_popup": "options.html"
+  },
   "commands": {
-    "open-tab-popup": {
-      "suggested_key": { "default": "Ctrl+Shift+4" },
-      "description": "Opens the tab manager popup."
-    },
-    "open-quick-access": {
-      "suggested_key": { "default": "Ctrl+Shift+5" },
-      "description": "Opens the quick access popup."
+    "_execute_browser_action": {
+      "suggested_key": { "default": "Ctrl+Shift+4" }
     }
   }  
 }
