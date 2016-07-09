@@ -1,12 +1,12 @@
 {
-  "name": "Tab Manager",
+  "name": "Tab Navigator",
   "version": "1.0",
   "manifest_version": 2,
   "description": "A simple manager for quickly finding and opening tabs.",
   "options_page": "options.html",
   "permissions": ["tabs"],
   "browser_action": {
-    "default_popup": "options.html"
+    "default_popup": "popup.html"
   },
   "commands": {
     "_execute_browser_action": {
