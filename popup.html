@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Bootstrap Example</title>
+        <title>Tab Navigator</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="popup.js"></script>
         <style>
             body {
 				min-width: 750px;
             }
-			.jumbotron {
+            .jumbotron {
 				text-indent: 50px;
+				padding: 5px;
+				background-color: black;
+				color: white;
+            }
+            .list-group {
+				max-height: 300px;
+				overflow-y:scroll;
+            }
+			a {
+				cursor: pointer;
 			}
         </style>
     </head>
@@ -21,22 +32,18 @@
             <h3>Navigate To Tab</h3>
         </div>
         <div class="container">
-            <form role="form">
+            <form role="form" autocomplete="off" id="form">
                 <div class="form-group">
                     <label for="search">Tab Text:</label>
-                    <input type="text" class="form-control" id="search">
+                    <input type="text" class="form-control" id="search" placeholder="Enter tab name">
                 </div>
                 <div class="form-group">
                     <label for="select">Select the tab to navigate to:</label>
-                    <select multiple class="form-control" id="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                    <div class="list-group" id="select"></div>
                 </div>
+                <button type="submit" class="btn btn-default" id="open">Open</button>  
             </form>
+            <button type="button" class="btn btn-danger pull-right" id="close">Close</button>
         </div>
     </body>
 </html>
