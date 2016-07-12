@@ -2,7 +2,7 @@
   "name": "Tab Navigator",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "A simple manager for quickly finding and opening tabs.",
+  "description": "Launches a navigator popup (default shortcut: Ctrl+Shift+4) for quickly finding and opening tabs.",
   "options_page": "options.html",
   "permissions": ["tabs"],
   "browser_action": {
