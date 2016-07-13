@@ -12,9 +12,19 @@ function initListeners() {
 	document.getElementById("close").addEventListener("click", function() {
 		close();
 	});
-	getSearchTextbox().addEventListener("input", updateOptions);
+	addTextFieldListeners();
 	document.getElementById("form").addEventListener("submit", navigateToTab);
 	document.onkeydown = handleKeys;
+}
+
+function addTextFieldListeners() {
+	var textbox = getSearchTextbox();
+	textbox.addEventListener("input", updateOptions);
+	textbox.addEventListener("keydown", function(e) {
+		if (e.keyCode === 38 || e.keyCode === 40) {
+			e.preventDefault();
+		}
+	});
 }
 
 function updateOptions() {
@@ -163,7 +173,6 @@ function moveSelection(start, next) {
 				if (prev != null) {
 					deactivateListItem(item);
 					activateListItem(prev);
-					// TODO this should replace and select the search text
 					prev.scrollIntoViewIfNeeded();
 				}
 				return;
