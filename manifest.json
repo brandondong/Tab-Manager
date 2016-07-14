@@ -5,8 +5,13 @@
   "description": "Launches a navigator popup (default shortcut: Ctrl+Shift+4) for quickly finding and opening tabs.",
   "options_page": "options.html",
   "permissions": ["tabs"],
+  "icons": {
+    "16": "logo16.png",
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
   },
   "commands": {
     "_execute_browser_action": {
