@@ -1,3 +1,6 @@
+/**
+ * Dynamically displays the current popup shortcut
+ */
 function init() {
 	chrome.commands.getAll(function(cmds) {
 		var shortcut = document.getElementById("shortcut");

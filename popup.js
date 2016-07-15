@@ -2,6 +2,9 @@ const MAX_URL_LENGTH = 95;
 
 const ELIPSES = "...";
 
+/**
+ * Initializes the popup, adding listeners and setting focus to the search textbox
+ */
 function init() {
 	getSearchTextbox().focus();
 	populateOptions();
@@ -27,6 +30,9 @@ function addTextFieldListeners() {
 	});
 }
 
+/**
+ * Updates the visibility of list elements by filtering with search text
+ */
 function updateOptions() {
 	var value = getSearchTextbox().value.toLowerCase();
 	var items = getListElement().getElementsByTagName("a");
@@ -141,6 +147,9 @@ function updateActive(sItem) {
 	}
 }
 
+/**
+ * Handles arrow and return keys outside the search textbox
+ */
 function handleKeys(e) {
 	if (e.keyCode == "38") {
 		moveSelectionUp();

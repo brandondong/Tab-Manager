@@ -12,7 +12,7 @@
   },
   "browser_action": {
     "default_popup": "popup.html",
-	"default_icon": "logo19.png"
+    "default_icon": "logo19.png"
   },
   "commands": {
     "_execute_browser_action": {
