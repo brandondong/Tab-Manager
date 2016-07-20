@@ -1,4 +1,4 @@
-const MAX_URL_LENGTH = 95;
+const MAX_URL_LENGTH = 92;
 
 const ELIPSES = "...";
 
